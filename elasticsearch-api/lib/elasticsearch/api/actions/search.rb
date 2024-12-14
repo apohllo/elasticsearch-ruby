@@ -172,7 +172,9 @@ module Elasticsearch
           :pre_filter_shard_size ]
 
         method = HTTP_GET
-        path   = Utils.__pathify( Utils.__listify(arguments[:index]), Utils.__listify(arguments[:type]), UNDERSCORE_SEARCH )
+        path   = Utils.__pathify( Utils.__listify(arguments[:index]),
+                                # Utils.__listify(arguments[:type]),
+                                 UNDERSCORE_SEARCH )
 
         params = Utils.__validate_and_extract_params arguments, valid_params
 

@@ -92,7 +92,7 @@ module Elasticsearch
 
         method = HTTP_POST
         path   = Utils.__pathify Utils.__listify(arguments[:index]),
-                                 Utils.__listify(arguments[:type]),
+                                 #Utils.__listify(arguments[:type]),
                                  '/_delete_by_query'
 
         params = Utils.__validate_and_extract_params arguments, valid_params

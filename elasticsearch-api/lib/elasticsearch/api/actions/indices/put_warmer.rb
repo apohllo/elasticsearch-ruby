@@ -50,7 +50,7 @@ module Elasticsearch
 
           method = HTTP_PUT
           path   = Utils.__pathify( Utils.__listify(arguments[:index]),
-                                    Utils.__listify(arguments[:type]),
+                                    #Utils.__listify(arguments[:type]),
                                     '_warmer',
                                     Utils.__listify(arguments[:name]) )
           params = Utils.__validate_and_extract_params arguments, valid_params

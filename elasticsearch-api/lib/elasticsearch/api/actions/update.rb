@@ -92,7 +92,7 @@ module Elasticsearch
 
         method = HTTP_POST
         path   = Utils.__pathify Utils.__escape(arguments[:index]),
-                                 Utils.__escape(arguments[:type]),
+                                 #Utils.__escape(arguments[:type]),
                                  Utils.__escape(arguments[:id]),
                                  '_update'
 

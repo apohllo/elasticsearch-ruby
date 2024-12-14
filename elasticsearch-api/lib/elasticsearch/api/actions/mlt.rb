@@ -109,7 +109,7 @@ module Elasticsearch
 
         method = HTTP_GET
         path   = Utils.__pathify Utils.__escape(arguments[:index]),
-                                 Utils.__escape(arguments[:type]),
+                                 #Utils.__escape(arguments[:type]),
                                  Utils.__escape(arguments[:id]),
                                  '_mlt'
 

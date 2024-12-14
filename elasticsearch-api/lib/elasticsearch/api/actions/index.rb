@@ -91,7 +91,7 @@ module Elasticsearch
 
         method = arguments[:id] ? HTTP_PUT : HTTP_POST
         path   = Utils.__pathify Utils.__escape(arguments[:index]),
-                                 Utils.__escape(arguments[:type]),
+                                 #Utils.__escape(arguments[:type]),
                                  Utils.__escape(arguments[:id])
 
         params = Utils.__validate_and_extract_params arguments, valid_params

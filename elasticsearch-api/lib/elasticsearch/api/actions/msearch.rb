@@ -44,7 +44,9 @@ module Elasticsearch
           :typed_keys ]
 
         method = HTTP_GET
-        path   = Utils.__pathify( Utils.__listify(arguments[:index]), Utils.__listify(arguments[:type]), '_msearch' )
+        path   = Utils.__pathify( Utils.__listify(arguments[:index]),
+                                 #Utils.__listify(arguments[:type]),
+                                 '_msearch' )
 
         params = Utils.__validate_and_extract_params arguments, valid_params
         body   = arguments[:body]

@@ -51,7 +51,7 @@ module Elasticsearch
           path   = Utils.__pathify(
                      Utils.__listify(arguments[:index]),
                      '_mapping',
-                     Utils.__listify(arguments[:type]),
+                     #Utils.__listify(arguments[:type]),
                      'field',
                      Utils.__listify(fields)
                    )

@@ -55,7 +55,7 @@ module Elasticsearch
 
           method = HTTP_GET
           path   = Utils.__pathify Utils.__listify(arguments[:index]),
-                                   Utils.__listify(arguments[:type]),
+                                   #Utils.__listify(arguments[:type]),
                                    arguments.delete(:prefix),
                                    '_settings',
                                    Utils.__escape(arguments[:name])

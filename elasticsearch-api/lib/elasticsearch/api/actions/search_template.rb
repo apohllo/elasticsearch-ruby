@@ -50,7 +50,9 @@ module Elasticsearch
           :scroll,
           :search_type ]
         method = HTTP_GET
-        path   = Utils.__pathify( Utils.__listify(arguments[:index]), Utils.__listify(arguments[:type]), '_search/template' )
+        path   = Utils.__pathify( Utils.__listify(arguments[:index]),
+                                 #Utils.__listify(arguments[:type]),
+                                 '_search/template' )
         params = Utils.__validate_and_extract_params arguments, valid_params
         body   = arguments[:body]
 

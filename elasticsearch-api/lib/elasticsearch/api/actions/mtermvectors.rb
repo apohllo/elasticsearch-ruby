@@ -52,7 +52,7 @@ module Elasticsearch
 
         method = HTTP_GET
         path   = Utils.__pathify Utils.__escape(arguments[:index]),
-                                 Utils.__escape(arguments[:type]),
+                                 #Utils.__escape(arguments[:type]),
                                  '_mtermvectors'
 
         params = Utils.__validate_and_extract_params arguments, valid_params
