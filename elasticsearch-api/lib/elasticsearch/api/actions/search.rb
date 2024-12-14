@@ -180,9 +180,9 @@ module Elasticsearch
 
         body   = arguments[:body]
         if body
-            HTTP_POST
+            method = HTTP_POST
         else
-            HTTP_GET
+            method = HTTP_GET
         end
 
         params[:fields] = Utils.__listify(params[:fields], :escape => false) if params[:fields]
