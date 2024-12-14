@@ -171,7 +171,7 @@ module Elasticsearch
           :max_concurrent_shard_requests,
           :pre_filter_shard_size ]
 
-        method = HTTP_GET
+        method = HTTP_POST
         path   = Utils.__pathify( Utils.__listify(arguments[:index]),
                                 # Utils.__listify(arguments[:type]),
                                  UNDERSCORE_SEARCH )
@@ -179,6 +179,11 @@ module Elasticsearch
         params = Utils.__validate_and_extract_params arguments, valid_params
 
         body   = arguments[:body]
+        if body
+            HTTP_POST
+        else
+            HTTP_GET
+        end
 
         params[:fields] = Utils.__listify(params[:fields], :escape => false) if params[:fields]
         params[:fielddata_fields] = Utils.__listify(params[:fielddata_fields], :escape => false) if params[:fielddata_fields]
