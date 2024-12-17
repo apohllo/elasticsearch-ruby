@@ -1,7 +1,6 @@
 module Elasticsearch
   module API
     module Actions
-
       # Create or update a document.
       #
       # The `index` API will either _create_ a new document, or _update_ an existing one, when a document `:id`
@@ -92,6 +91,7 @@ module Elasticsearch
         method = arguments[:id] ? HTTP_PUT : HTTP_POST
         path   = Utils.__pathify Utils.__escape(arguments[:index]),
                                  #Utils.__escape(arguments[:type]),
+                                 UNDERSCORE_GET,
                                  Utils.__escape(arguments[:id])
 
         params = Utils.__validate_and_extract_params arguments, valid_params

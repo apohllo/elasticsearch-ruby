@@ -1,7 +1,6 @@
 module Elasticsearch
   module API
     module Actions
-      UNDERSCORE_GET = "_doc"
 
       # Return a specified document.
       #
